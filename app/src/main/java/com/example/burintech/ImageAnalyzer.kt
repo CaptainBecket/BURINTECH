@@ -47,7 +47,7 @@ private suspend fun <T> Task<T>.await(): T {
     }
 }
 @RequiresPermission(allOf = [Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION])
-public fun imageAnalyzer(
+fun imageAnalyzer(
     context: Context,
     uri: Uri,
     dataBase: BarcodeDataBase

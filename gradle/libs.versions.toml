@@ -14,6 +14,7 @@ mlkit-barcode-scanning = "17.3.0"
 accompanistPermissions = "0.37.3"
 #Room + dagger hilt
 hilt = "2.51.1"
+opencsv = "5.5.2"
 playServicesLocation = "21.3.0"
 room = "2.7.1"
 runtimeLivedata = "1.8.2"
@@ -40,6 +41,7 @@ mlkit-barcode-scanning = { group = "com.google.mlkit", name = "barcode-scanning"
 #For the permission
 accompanistPermissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanistPermissions" }
 # Room
+opencsv = { module = "com.opencsv:opencsv", version.ref = "opencsv" }
 play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }

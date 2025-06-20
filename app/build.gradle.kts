@@ -56,11 +56,13 @@ dependencies {
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
     implementation(libs.androidx.runtime.livedata)
-    kapt(libs.room.compiler)
+    kapt(libs.room.compiler) // don't change to implementation, doesn't work
     // Accompanist Permissions for handling runtime permissions
     implementation(libs.accompanistPermissions)
     //gps
     implementation(libs.play.services.location)
+    //CSV export
+    implementation(libs.opencsv)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -78,9 +80,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    implementation(libs.annotations)  // Явно указываем новую версию
-
+    implementation(libs.annotations)  // correct version
     configurations.all {
-        exclude(group = "com.intellij", module = "annotations")  // Исключаем старую
+        exclude(group = "com.intellij", module = "annotations")
     }
 }

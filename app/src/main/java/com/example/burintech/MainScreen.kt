@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Environment
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.RequiresPermission
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -39,7 +40,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-
+@RequiresPermission(allOf = [Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION])
 @OptIn(ExperimentalPermissionsApi::class)
 @Composable
 fun MainScreen(modifier: Modifier = Modifier, dataBase: BarcodeDataBase){
@@ -187,7 +188,6 @@ fun MainScreen(modifier: Modifier = Modifier, dataBase: BarcodeDataBase){
             } else{
                 Button(onClick = {
                     GPSPepmission.launchPermissionRequest()
-
                 }) {
                     Text("Запросить разрешение к GPS")
                 }
