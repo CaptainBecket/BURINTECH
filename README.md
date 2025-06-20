@@ -4,6 +4,8 @@ Examples of using:
 - Jetpack Compose
 - MLKit (Barcode detector part)
 - GPS
-- Save images to folder
+- Save analyzed images to folder
 - Room database
 - Export database in csv format(in process)
+- Get image from camera
+- Get image from storage
